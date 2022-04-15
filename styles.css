@@ -26,18 +26,51 @@ body {
     border-radius: 5px;
     padding: 15px 20px 20px;
 }
-.add-box {
+.add-box, .icon, .bottom-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.add-box {
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
-
 .add-box .icon {
     height: 78px;
     width: 78px;
     color: #88ABff;
+    justify-content: center;
     font-size: 48px;
     border-radius: 50%;
     border: 2px dashed #88ABff;
+}
+
+.add-box p {
+    color: #88ABff;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.wrapper .note {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.note p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.note span {
+    color: #575757;
+    font-size: 16px;
+    margin-top: 5px;
+    display: block;
+}
+
+.note .bottom-content {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
 }
