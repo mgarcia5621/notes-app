@@ -11,6 +11,6 @@ closeIcon.addEventListener("click", () => {
     popupBox.classList.remove("show");
 });  
 
-addBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", e => {
     console.log("Button clicked");
 });  
