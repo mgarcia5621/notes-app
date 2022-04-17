@@ -185,6 +185,7 @@ body {
 
 .content header i {
     color: #8b8989;
+    padding-left: 8px 10px;
     cursor: pointer;
     font-size: 23px;
 }

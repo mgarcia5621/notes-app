@@ -11,11 +11,21 @@ addBox.addEventListener("click", () => {
 
 closeIcon.addEventListener("click", () => {
     popupBox.classList.remove("show");
+    console.log('')
 });  
 
 addBtn.addEventListener("click", e => {
     e.preventDefault()
     let noteTitle = titletag.value,
     noteDesc = descTag.value;
-    console.log(noteTitle, noteDesc);
+
+    if(noteTitle || noteDesc) {
+        // getting month, day year from the current date
+        let dateObj = new Date(),
+        month = dateObj.getMonth(),
+        day = dateObj.getDay(),
+        year = dateObj.getFullYear();
+        console.log(dateObj);
+    }
+
 });  
