@@ -15,7 +15,7 @@ closeIcon.addEventListener("click", () => {
 
 addBtn.addEventListener("click", e => {
     e.preventDefault()
-    let noteTitle = titleTag.value,
+    let noteTitle = titletag.value,
     noteDesc = descTag.value;
     console.log(noteTitle, noteDesc);
 });  
