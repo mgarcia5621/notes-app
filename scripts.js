@@ -5,6 +5,9 @@ titletag = document.querySelector("input"),
 descTag = document.querySelector("textarea"),
 addBtn = popupBox.querySelector("button");
 
+const months = ["January", "February", "March", "April", "May", "June",
+                "August", "September", "October", "November", "December"];
+
 addBox.addEventListener("click", () => {
     popupBox.classList.add("show");
 });
@@ -22,10 +25,10 @@ addBtn.addEventListener("click", e => {
     if(noteTitle || noteDesc) {
         // getting month, day year from the current date
         let dateObj = new Date(),
-        month = dateObj.getMonth(),
+        month = monthsDateObj.getMonth(),
         day = dateObj.getDay(),
         year = dateObj.getFullYear();
-        console.log(dateObj);
+        console.log('month, day, year');
     }
 
 });  
