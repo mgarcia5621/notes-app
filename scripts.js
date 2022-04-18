@@ -29,8 +29,9 @@ addBtn.addEventListener("click", e => {
         day = dateObj.getDay(),
         year = dateObj.getFullYear();
 
-        let noteInfo {
-            title: noteTitle, description: noteDesc,
+        let noteInfo = {
+            title: noteTitle, 
+            description: noteDesc,
             date: `${month} ${day}, ${year}`
         }
         const notes =  [];
