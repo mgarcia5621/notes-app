@@ -7,7 +7,7 @@ addBtn = popupBox.querySelector("button");
 
 const months = ["January", "February", "March", "April", "May", "June",
                 "August", "September", "October", "November", "December"];
-
+const notes =  JSON.parse(localStorage.getItem("notes") || "[]")
 addBox.addEventListener("click", () => {
     popupBox.classList.add("show");
 });
@@ -25,10 +25,18 @@ addBtn.addEventListener("click", e => {
     if(noteTitle || noteDesc) {
         // getting month, day year from the current date
         let dateObj = new Date(),
-        month = monthsDateObj.getMonth(),
+        month = months[dateObj.getMonth()],
         day = dateObj.getDay(),
         year = dateObj.getFullYear();
-        console.log('month, day, year');
+
+        let noteInfo {
+            title: noteTitle, description: noteDesc,
+            date: `${month} ${day}, ${year}`
+        }
+        const notes =  [];
+        notes.push(noteInfo); // adding new to notes
+        //
+        localStorage.setItem("notes", JSON.stringify(notes))
     }
 
 });  
