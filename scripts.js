@@ -19,6 +19,7 @@ closeIcon.addEventListener("click", () => {
 showNotes(); 
 
 function showNotes() {
+    document.classList.remove(".note")
     notes.forEach((note) => {
         let ulTag = `<ul class="note">
 <div class="details">
