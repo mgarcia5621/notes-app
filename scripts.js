@@ -14,8 +14,31 @@ addBox.addEventListener("click", () => {
 
 closeIcon.addEventListener("click", () => {
     popupBox.classList.remove("show");
-    console.log('')
-});  
+let ulTag = `<ul class="note">
+<div class="details">
+    <p>${note.title}</p>
+    <span>${note.description}</span>
+</div>
+<div class="bottom-content">
+    <span>${note.date}</span>
+    <div class="settings">
+        <i class="fa fa-ellipsis-h"></i>
+        <ul class="menu">
+            <li><i class="pen" class="fa fa-pen">Edit</i></li>
+            <li><i class="trash-can" class="fa fa-trash">Delete</i></li>
+        </ul>
+        </div>
+    </div>
+        </ul>`;
+        addBox.insertAdjacentElement("afterend", ulTag);
+}); 
+showNotes(); 
+
+function showNotes() {
+    notes.forEach((note) => {
+        console.log(note);
+    })
+}
 
 addBtn.addEventListener("click", e => {
     e.preventDefault()
@@ -37,7 +60,8 @@ addBtn.addEventListener("click", e => {
         const notes =  [];
         notes.push(noteInfo); // adding new to notes
         //
-        localStorage.setItem("notes", JSON.stringify(notes))
+        localStorage.setItem("notes", JSON.stringify(notes));
+        closeIcon.click();
     }
 
 });  
