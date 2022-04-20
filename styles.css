@@ -108,11 +108,11 @@ body {
     right: -5px;
     transition: transform 0.2s ease;
 }
-.settings:hover .menu {
+/* .settings:hover .menu {
     transform: scaleX(1);
     /* background: red; */
     
-} 
+}  */
 .settings .menu li  {
     height: 25px;
     font-size: 15px;

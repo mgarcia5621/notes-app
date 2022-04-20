@@ -14,14 +14,16 @@ addBox.addEventListener("click", () => {
 
 closeIcon.addEventListener("click", () => {
     popupBox.classList.remove("show");
-        addBox.insertAdjacentElement("afterend", ulTag);
+    titletag.value = "";
+    descTag.value = "";
+        
 }); 
-showNotes(); 
+
 
 function showNotes() {
-    document.classList.remove(".note")
+    document.classList.remove(".note").forEach(note => note.remove());
     notes.forEach((note) => {
-        let ulTag = `<ul class="note">
+        let ulTag = `<li class="note">
 <div class="details">
     <p>${note.title}</p>
     <span>${note.description}</span>
@@ -29,15 +31,21 @@ function showNotes() {
 <div class="bottom-content">
     <span>${note.date}</span>
     <div class="settings">
-        <i class="fa fa-ellipsis-h"></i>
+        <i onClick= "showMenu(this)" class="fa fa-ellipsis-h"></i>
         <ul class="menu">
-            <li><i class="pen" class="fa fa-pen">Edit</i></li>
-            <li><i class="trash-can" class="fa fa-trash">Delete</i></li>
+            <ul><i class="pen" class="fa fa-pen">Edit</i></ul>
+            <ul><i class="trash-can" class="fa fa-trash">Delete</i></ul>
         </ul>
         </div>
     </div>
         </ul>`;
+        addBox.insertAdjacentElement("afterend", ulTag);
     })
+}
+showNotes(); 
+
+function showMenu(elem) {
+    elem.parentElement.classList.add("show");
 }
 
 addBtn.addEventListener("click", e => {
